@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --baseFont: "Montserrat", sans-serif;
+  --primary: #fed941;
+  --white: #fffffe;
+  --grey: #a7a9be;
+  --black: #000000;
+  --background: #0f0e17;
+  --headline2: extrabold 2.875rem/3.5rem var(--baseFont);
+  --headline1: 700 3rem/3.625rem var(--baseFont);
+  --headline3: 700 1.75rem / normal var(--baseFont);
+  --headline4: 700 1.5625rem / normal var(--baseFont);
+  --button: 700 1.125rem/1.75rem var(--baseFont);
+  --caption: 400 0.75rem/1.375rem var(--baseFont);
+  --body1-regular: 400 1.125rem/1.6875rem var(--baseFont);
+  --body1-bold: 700 1.125rem/1.6875rem var(--baseFont);
+  --body2-regular: 400 1rem/1.375rem var(--baseFont);
+  --body2-bold: 700 1rem/1.1875rem var(--baseFont);
+}
+
+body {
+  color: var(--white);
+  background-color: var(--black);
+  font-family: var(--baseFont);
+  margin: 0;
+}
