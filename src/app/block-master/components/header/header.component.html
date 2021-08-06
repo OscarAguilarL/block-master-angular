@@ -9,14 +9,16 @@
   </div>
   <ul class="links">
     <li
-      class="is-active"
-    >Todas</li>
-    <li
-
-    >Más valoradas</li>
-    <li
-
-    >Menos valoradas</li>
+      routerLink=""
+      routerLinkActive="is-active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      Todas
+    </li>
+    <li routerLink="most-valued" routerLinkActive="is-active">Más valoradas</li>
+    <li routerLink="less-valued" routerLinkActive="is-active">
+      Menos valoradas
+    </li>
   </ul>
   <div class="search-container">
     <form>

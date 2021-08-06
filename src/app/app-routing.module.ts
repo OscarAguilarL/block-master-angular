@@ -1,7 +1,35 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+import { AllMoviesComponent } from './block-master/pages/all-movies/all-movies.component';
+import { MostValuedComponent } from './block-master/pages/most-valued/most-valued.component';
+import { LessValuedComponent } from './block-master/pages/less-valued/less-valued.component';
+import { MovieComponent } from './block-master/pages/movie/movie.component';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: AllMoviesComponent,
+    pathMatch: 'full',
+  },
+  {
+    path: 'most-valued',
+    component: MostValuedComponent,
+  },
+  {
+    path: 'less-valued',
+    component: LessValuedComponent,
+  },
+  {
+    path: 'movie/:id',
+    component: MovieComponent,
+  },
+  {
+    path: '**',
+    // redirectTo: '404Component',
+    redirectTo: '',
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

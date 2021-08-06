@@ -23,10 +23,10 @@
 
 .header .links li.is-active {
   color: var(--primary);
-  border-block-end: 3px solid var(--primary);
+  box-shadow: 0 3px 0 var(--primary);
 }
 
-.search-container form .input{
+.search-container form .input {
   display: flex;
   inline-size: 37.75rem;
   align-items: stretch;
@@ -44,6 +44,11 @@
   border: none;
   inline-size: 100%;
   block-size: 100%;
+}
+
+.search-container form .input input::placeholder {
+  font: var(--body2-regular);
+  color: var(--grey);
 }
 
 .search-container form .input .input-logo {
