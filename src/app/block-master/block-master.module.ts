@@ -9,6 +9,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { MovieComponent } from './pages/movie/movie.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { SpinnerLoaderComponent } from './components/spinner-loader/spinner-loader.component';
 
 
 
@@ -19,7 +20,8 @@ import { RouterModule } from '@angular/router';
     LessValuedComponent,
     HeroComponent,
     HeaderComponent,
-    MovieComponent
+    MovieComponent,
+    SpinnerLoaderComponent
   ],
   imports: [
     CommonModule,
