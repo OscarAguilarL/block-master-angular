@@ -54,6 +54,7 @@
 .search-container form .input .input-logo {
   background: var(--primary);
   color: var(--black);
+  font-size: 1.25rem;
   padding: 0.75rem;
   border-radius: 0 8px 8px 0;
 }
