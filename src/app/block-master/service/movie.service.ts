@@ -2,6 +2,8 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
+import { MovieResponse } from '../interface/movie.interface';
+
 @Injectable({
   providedIn: 'root',
 })
@@ -14,8 +16,8 @@ export class MovieService {
 
   constructor(private http: HttpClient) {}
 
-  getAllMovies (): Observable<any[]> {
+  getAllMovies() {
     const url: string = `${this.apiUrl}/popular`;
-    return this.http.get<any[]>(url, { params: this.params })
+    return this.http.get<MovieResponse>(url, { params: this.params });
   }
 }
