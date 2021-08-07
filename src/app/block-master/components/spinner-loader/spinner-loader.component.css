@@ -7,7 +7,7 @@
 .spinner-loader img {
   inline-size: 45px;
   block-size: 45px;
-  animation: spinner 1.5s linear infinite;
+  animation: spinner .7s linear infinite;
 }
 
 @keyframes spinner {
