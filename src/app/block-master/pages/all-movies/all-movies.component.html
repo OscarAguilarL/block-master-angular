@@ -1,4 +1,4 @@
-<app-spinner-loader *ngIf="!movies; else divResults"></app-spinner-loader>
+<app-spinner-loader *ngIf="movies.length === 0; else divResults"></app-spinner-loader>
 
 <ng-template #divResults>
   <app-results
