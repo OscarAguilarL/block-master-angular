@@ -9,21 +9,27 @@ import { MovieResponse } from '../interface/movie.interface';
   providedIn: 'root',
 })
 export class MovieService {
-  private apiUrl: string = 'https://api.themoviedb.org/3/movie';
+  private apiUrl: string = 'https://api.themoviedb.org/3';
+  apiKey: string = '26226bc0d351dd2e356a4f74d1f1d276';
 
   get params() {
-    return new HttpParams().set('api_key', '26226bc0d351dd2e356a4f74d1f1d276');
+    return new HttpParams().set('api_key', this.apiKey);
   }
 
   constructor(private http: HttpClient) {}
 
   getAllMovies(): Observable<MovieResponse> {
-    const url: string = `${this.apiUrl}/popular`;
+    const url: string = `${this.apiUrl}/movie/popular`;
     return this.http.get<MovieResponse>(url, { params: this.params });
   }
 
   getTopRatedMovies(): Observable<MovieResponse> {
-    const url: string = `${this.apiUrl}/top_rated`;
+    const url: string = `${this.apiUrl}/movie/top_rated`;
     return this.http.get<MovieResponse>(url, { params: this.params });
+  }
+
+  getLessValuedMovies(): Observable<MovieResponse> {
+    const url: string = `${this.apiUrl}/discover/movie`;
+    return this.http.get<MovieResponse>(url, { params: this.params }).pipe(tap(console.log));
   }
 }

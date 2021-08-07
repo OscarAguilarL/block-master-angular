@@ -1,1 +1,9 @@
-<p>less-valued works!</p>
+<app-spinner-loader *ngIf="sortedMovies.length === 0; else divResults"></app-spinner-loader>
+
+<ng-template #divResults>
+  <app-results
+    [movies]="sortedMovies"
+    [pageTitle]="'Peliculas menos valoradas'"
+    class="container"
+  ></app-results>
+</ng-template>
