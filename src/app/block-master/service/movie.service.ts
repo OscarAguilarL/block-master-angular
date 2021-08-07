@@ -1,6 +1,7 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { tap } from 'rxjs/operators';
 
 import { MovieResponse } from '../interface/movie.interface';
 
@@ -16,8 +17,13 @@ export class MovieService {
 
   constructor(private http: HttpClient) {}
 
-  getAllMovies() {
+  getAllMovies(): Observable<MovieResponse> {
     const url: string = `${this.apiUrl}/popular`;
+    return this.http.get<MovieResponse>(url, { params: this.params });
+  }
+
+  getTopRatedMovies(): Observable<MovieResponse> {
+    const url: string = `${this.apiUrl}/top_rated`;
     return this.http.get<MovieResponse>(url, { params: this.params });
   }
 }

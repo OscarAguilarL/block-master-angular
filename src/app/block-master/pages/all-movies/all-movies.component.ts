@@ -13,8 +13,10 @@ export class AllMoviesComponent implements OnInit {
   constructor(private movieService: MovieService) {}
 
   ngOnInit(): void {
-    this.movieService.getAllMovies().subscribe(({ results }) => {
-      this.movies = results;
-    });
+    setTimeout(() => {
+      this.movieService.getAllMovies().subscribe(({ results }) => {
+        this.movies = results;
+      });
+    }, 500);
   }
 }

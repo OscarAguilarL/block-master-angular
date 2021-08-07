@@ -1,1 +1,9 @@
-<p>most-valued works!</p>
+<app-spinner-loader *ngIf="movies.length === 0; else divResults"></app-spinner-loader>
+
+<ng-template #divResults>
+  <app-results
+    [movies]="movies"
+    [pageTitle]="'Peliculas más valoradas'"
+    class="container"
+  ></app-results>
+</ng-template>
