@@ -30,7 +30,7 @@ export class MovieService {
 
   getLessValuedMovies(): Observable<MovieResponse> {
     const url: string = `${this.apiUrl}/discover/movie`;
-    return this.http.get<MovieResponse>(url, { params: this.params }).pipe(tap(console.log));
+    return this.http.get<MovieResponse>(url, { params: this.params });
   }
 
   getSearch( termino: string ): Observable<MovieResponse> {
