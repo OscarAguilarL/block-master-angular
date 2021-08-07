@@ -12,6 +12,7 @@ import { RouterModule } from '@angular/router';
 import { SpinnerLoaderComponent } from './components/spinner-loader/spinner-loader.component';
 import { ResultsComponent } from './components/results/results.component';
 import { SearchComponent } from './pages/search/search.component';
+import { InputSearchComponent } from './components/input-search/input-search.component';
 
 
 
@@ -25,7 +26,8 @@ import { SearchComponent } from './pages/search/search.component';
     MovieComponent,
     SpinnerLoaderComponent,
     ResultsComponent,
-    SearchComponent
+    SearchComponent,
+    InputSearchComponent
   ],
   imports: [
     CommonModule,
