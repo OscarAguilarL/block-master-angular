@@ -23,3 +23,12 @@ body {
   font-family: var(--baseFont);
   margin: 0;
 }
+
+body::-webkit-scrollbar {
+  inline-size: 0.25rem;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 0.5rem;
+}
