@@ -10,6 +10,7 @@ import { MovieComponent } from './pages/movie/movie.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { SpinnerLoaderComponent } from './components/spinner-loader/spinner-loader.component';
+import { ResultsComponent } from './components/results/results.component';
 
 
 
@@ -21,7 +22,8 @@ import { SpinnerLoaderComponent } from './components/spinner-loader/spinner-load
     HeroComponent,
     HeaderComponent,
     MovieComponent,
-    SpinnerLoaderComponent
+    SpinnerLoaderComponent,
+    ResultsComponent
   ],
   imports: [
     CommonModule,

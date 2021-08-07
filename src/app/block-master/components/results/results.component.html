@@ -1,0 +1,21 @@
+<h1 class="title">{{ pageTitle }}</h1>
+
+<div class="container">
+  <div class="card" *ngFor="let item of movies">
+    <div class="card-img">
+      <a [routerLink]="['/movie', item.id]">
+        <img
+          [src]="poster_path + item.poster_path"
+          [alt]="'Poster de ' + item.title"
+          [title]="'Poster de ' + item.title"
+          width="220"
+          height="330"
+        />
+      </a>
+    </div>
+    <div class="card-rating">
+      <i class="icon-star"></i>
+      <span>{{ item.vote_average }}</span>
+    </div>
+  </div>
+</div>

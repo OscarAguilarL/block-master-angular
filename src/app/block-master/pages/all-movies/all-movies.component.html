@@ -1,2 +1,9 @@
-<p>all-movies works!</p>
-<app-spinner-loader></app-spinner-loader>
+<app-spinner-loader *ngIf="!movies; else divResults"></app-spinner-loader>
+
+<ng-template #divResults>
+  <app-results
+    [movies]="movies"
+    [pageTitle]="'Todas las peliculas'"
+    class="container"
+  ></app-results>
+</ng-template>
