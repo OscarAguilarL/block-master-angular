@@ -1,18 +1,18 @@
 <div class="search-container">
-  <form>
+  <form (ngSubmit)="buscar()" >
     <div class="input">
       <div class="input-item">
         <input
           type="search"
           name="search"
-          id="search"
+          [(ngModel)]="termino"
           placeholder="Busca tu película favorita"
           autocomplete="off"
         />
       </div>
-      <div class="input-logo">
+      <button class="input-logo" type="submit">
         <i class="icon-search" aria-hidden="true"></i>
-      </div>
+      </button>
     </div>
   </form>
 </div>
