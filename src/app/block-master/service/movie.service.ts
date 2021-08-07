@@ -32,4 +32,10 @@ export class MovieService {
     const url: string = `${this.apiUrl}/discover/movie`;
     return this.http.get<MovieResponse>(url, { params: this.params }).pipe(tap(console.log));
   }
+
+  getSearch( termino: string ): Observable<MovieResponse> {
+    termino = termino.replace('-', ' ');
+    const url: string = `${this.apiUrl}/search/movie`;
+    return this.http.get<MovieResponse>(url, { params: this.params.set('query', termino) });
+  }
 }

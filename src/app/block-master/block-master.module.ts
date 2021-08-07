@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { SpinnerLoaderComponent } from './components/spinner-loader/spinner-loader.component';
 import { ResultsComponent } from './components/results/results.component';
+import { SearchComponent } from './pages/search/search.component';
 
 
 
@@ -23,7 +24,8 @@ import { ResultsComponent } from './components/results/results.component';
     HeaderComponent,
     MovieComponent,
     SpinnerLoaderComponent,
-    ResultsComponent
+    ResultsComponent,
+    SearchComponent
   ],
   imports: [
     CommonModule,

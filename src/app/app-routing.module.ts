@@ -5,6 +5,7 @@ import { AllMoviesComponent } from './block-master/pages/all-movies/all-movies.c
 import { MostValuedComponent } from './block-master/pages/most-valued/most-valued.component';
 import { LessValuedComponent } from './block-master/pages/less-valued/less-valued.component';
 import { MovieComponent } from './block-master/pages/movie/movie.component';
+import { SearchComponent } from './block-master/pages/search/search.component';
 
 const routes: Routes = [
   {
@@ -19,6 +20,10 @@ const routes: Routes = [
   {
     path: 'less-valued',
     component: LessValuedComponent,
+  },
+  {
+    path: 'search/:query',
+    component: SearchComponent,
   },
   {
     path: 'movie/:id',
