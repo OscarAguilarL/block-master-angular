@@ -1,11 +1,27 @@
-<app-spinner-loader
-  *ngIf="movies.length === 0; else divResults"
-></app-spinner-loader>
+<div class="notFound" *ngIf="isError; else divPage">
+  <div class="notFound">
+    <div class="notFound-img">
+      <img
+        src="assets/img/search-not-found.png"
+        alt="No se encontraron resultados de la busqueda."
+        width="488"
+        height="429"
+      />
+    </div>
+    <h3>No se encontraron resultados para: {{ query }}</h3>
+  </div>
+</div>
 
-<ng-template #divResults>
-  <app-results
-    [movies]="movies"
-    [pageTitle]="'Resultados de búsqueda'"
-    class="container"
-  ></app-results>
+<ng-template #divPage>
+  <app-spinner-loader
+    *ngIf="movies.length === 0; else divResults"
+  ></app-spinner-loader>
+
+  <ng-template #divResults>
+    <app-results
+      [movies]="movies"
+      [pageTitle]="'Resultados de búsqueda'"
+      class="container"
+    ></app-results>
+  </ng-template>
 </ng-template>

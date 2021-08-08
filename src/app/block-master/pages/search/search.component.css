@@ -1,0 +1,20 @@
+.notFound {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.notFound-img {
+  inline-size: 30.5rem;
+  block-size: 26.8125rem;
+}
+
+.notFound-img img {
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.notFound h3 {
+  font: var(--headline3);
+}

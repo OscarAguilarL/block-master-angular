@@ -12,6 +12,8 @@ import { MovieService } from '../../service/movie.service';
 })
 export class SearchComponent implements OnInit {
   movies: Movie[] = [];
+  query: string = '';
+  isError: boolean = false;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -20,9 +22,22 @@ export class SearchComponent implements OnInit {
 
   ngOnInit(): void {
     this.activatedRoute.params
-      .pipe(switchMap(({ query }) => this.movieService.getSearch(query)))
-      .subscribe((resp) => {
-        this.movies = resp.results;
-      });
+      .pipe(
+        switchMap(({ query }) => {
+          this.isError = false;
+          this.query = query;
+          return this.movieService.getSearch(this.query);
+        })
+      )
+      .subscribe(
+        (resp) => {
+          resp.results.length === 0
+            ? (this.isError = true)
+            : (this.movies = resp.results);
+        },
+        (err) => {
+          this.isError = true;
+        }
+      );
   }
 }
