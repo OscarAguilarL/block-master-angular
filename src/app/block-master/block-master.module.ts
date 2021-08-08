@@ -13,6 +13,7 @@ import { SpinnerLoaderComponent } from './components/spinner-loader/spinner-load
 import { ResultsComponent } from './components/results/results.component';
 import { SearchComponent } from './pages/search/search.component';
 import { InputSearchComponent } from './components/input-search/input-search.component';
+import { MovieCardComponent } from './components/movie-card/movie-card.component';
 
 
 
@@ -27,7 +28,8 @@ import { InputSearchComponent } from './components/input-search/input-search.com
     SpinnerLoaderComponent,
     ResultsComponent,
     SearchComponent,
-    InputSearchComponent
+    InputSearchComponent,
+    MovieCardComponent
   ],
   imports: [
     CommonModule,

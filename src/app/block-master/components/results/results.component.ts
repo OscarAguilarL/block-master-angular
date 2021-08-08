@@ -10,9 +10,6 @@ export class ResultsComponent implements OnInit {
   @Input() movies: Movie[] = [];
   @Input() pageTitle: string = '';
 
-  poster_path: string =
-    'https://image.tmdb.org/t/p/w500/';
-
   constructor() {}
 
   ngOnInit(): void {}

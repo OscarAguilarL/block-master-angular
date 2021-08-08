@@ -8,32 +8,3 @@
   gap: 1.25rem;
   padding-block-end: 3rem;
 }
-
-.card {
-  position: relative;
-  border-radius: 8px;
-  overflow: hidden;
-  inline-size: 13.75rem;
-  block-size: 20.625rem;
-}
-
-.card img {
-  inline-size: 100%;
-  block-size: 100%;
-}
-
-.card-rating {
-  position: absolute;
-  top: 1.5rem;
-  background-color: rgba(0, 0, 0, .5);
-  border: 3px solid var(--primary);
-  border-inline-start: none;
-  border-radius: 0 50px 50px 0;
-  padding-inline-end: 1.5rem;
-  padding-block: 1rem;
-  inline-size: 5.625rem;
-  font: var(--headline3);
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}

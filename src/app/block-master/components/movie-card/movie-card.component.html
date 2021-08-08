@@ -1,0 +1,17 @@
+<div class="card">
+  <div class="card-img">
+    <a [routerLink]="['/movie', movie.id]">
+      <img
+        [src]="poster_path + movie.poster_path"
+        [alt]="'Poster de ' + movie.title"
+        [title]="'Poster de ' + movie.title"
+        width="220"
+        height="330"
+      />
+    </a>
+  </div>
+  <div class="card-rating">
+    <i class="icon-star"></i>
+    <span>{{ movie.vote_average }}</span>
+  </div>
+</div>
