@@ -6,7 +6,7 @@ import { MostValuedComponent } from './pages/most-valued/most-valued.component';
 import { LessValuedComponent } from './pages/less-valued/less-valued.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { HeaderComponent } from './components/header/header.component';
-import { MovieComponent } from './pages/movie/movie.component';
+import { MovieComponent } from './components/movie/movie.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { SpinnerLoaderComponent } from './components/spinner-loader/spinner-loader.component';
