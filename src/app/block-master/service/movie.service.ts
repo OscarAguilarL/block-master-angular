@@ -42,6 +42,8 @@ export class MovieService {
 
   getMovieDetails(movieId: string): Observable<Movie> {
     const url: string = `${this._apiUrl}/movie/${movieId}`;
-    return this.http.get<Movie>(url, { params: this.params });
+    return this.http.get<Movie>(url, {
+      params: this.params.set('language', 'es'),
+    });
   }
 }
