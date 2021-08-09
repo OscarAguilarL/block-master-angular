@@ -26,10 +26,6 @@ const routes: Routes = [
     component: SearchComponent,
   },
   {
-    path: 'movie/:id',
-    component: MovieComponent,
-  },
-  {
     path: '**',
     // redirectTo: '404Component',
     redirectTo: '',
